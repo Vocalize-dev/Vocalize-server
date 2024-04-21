@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-env --allow-sys --watch src/main.ts",
+    "start": "deno run --allow-net --allow-env --allow-sys src/main.ts",
+    "gen": "buf generate proto"
+  },
+  "imports": {
+    "fastify": "npm:fastify",
+    "@@bufbuild/buf": "npm:@bufbuild/buf",
+    "@bufbuild/protoc-gen-es": "npm:@bufbuild/protoc-gen-es",
+    "@bufbuild/protobuf": "npm:@bufbuild/protobuf",
+    "@connectrpc/connect-node": "npm:@connectrpc/connect-node",
+    "@connectrpc/connect-fastify": "npm:@connectrpc/connect-fastify"
+  },
+  "lock": false,
+  "exclude": ["dist/"]
+}
